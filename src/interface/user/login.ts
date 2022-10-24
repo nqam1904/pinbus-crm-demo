@@ -1,22 +1,15 @@
 /** user's role */
-export type Role = 'guest' | 'admin';
+
+import { Response } from "../utilities";
 
 export interface LoginParams {
-  /** 用户名 */
   username: string;
-  /** 用户密码 */
+  loginType: number | string;
+  agentCode: string;
   password: string;
+  status: string;
 }
 
-export interface LoginResult {
-  /** auth token */
-  token: string;
-  username: string;
-  role: Role;
+export interface LoginResult extends Response {
+  data: any;
 }
-
-export interface LogoutParams {
-  token: string;
-}
-
-export interface LogoutResult {}

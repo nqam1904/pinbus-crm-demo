@@ -1,4 +1,4 @@
-import { request } from './request';
+import { request } from './axiosClient';
 import { PageData } from '@/interface';
 import { BuniesssUser } from '@/interface/business';
 

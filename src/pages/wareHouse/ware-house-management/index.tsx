@@ -1,24 +1,26 @@
-import { Space, Tag } from 'antd';
-import { getWareHouseList } from '@/api/warehouse';
+import { Space, Tag } from "antd";
+import { getWareHouseList } from "@/api/warehouse";
 
-import MyButton from '@/components/basic/button';
-import MyPage, { MyPageTableOptions } from '@/components/business/page';
-import { WareHouse } from '@/interface/warehouse';
-import { FC } from 'react';
+import MyButton from "@/components/basic/button";
+import MyPage, { MyPageTableOptions } from "@/components/business/page";
+import { WareHouse } from "@/interface/warehouse";
+import { FC } from "react";
 
 const { Item: SearchItem } = MyPage.MySearch;
 
 const tableColums: MyPageTableOptions<WareHouse> = [
   {
-    title: 'id', dataIndex: 'id', key: 'id'
+    title: "id",
+    dataIndex: "id",
+    key: "id",
   },
-  { title: 'Tên kho hàng', dataIndex: 'name', key: 'name' },
-  { title: 'Chi nhánh', dataIndex: 'address', key: 'address' },
-  { title: 'Người liên lạc', dataIndex: 'linkman', key: 'linkman' },
-  { title: 'Số điện thoại', dataIndex: 'phone', key: 'phone' },
+  { title: "Tên kho hàng", dataIndex: "name", key: "name" },
+  { title: "Chi nhánh", dataIndex: "address", key: "address" },
+  { title: "Người liên lạc", dataIndex: "linkman", key: "linkman" },
+  { title: "Số điện thoại", dataIndex: "phone", key: "phone" },
   {
-    title: 'Action',
-    key: 'action',
+    title: "Action",
+    key: "action",
     render: (_, record) => (
       <Space size="middle">
         <MyButton type="text">Invite {record.name}</MyButton>
@@ -30,16 +32,17 @@ const tableColums: MyPageTableOptions<WareHouse> = [
 
 const WareHouseWithSearchPage: FC = () => {
   return (
-    <MyPage
-      pageApi={getWareHouseList}
-      searchRender={
-        <>
-          <SearchItem label="Tra Cứu" name="research" type="input" />
-          <SearchItem label="Thêm Mới" name="insert" type="input" />
-        </>
-      }
-      tableOptions={tableColums}
-    ></MyPage>
+    // <MyPage
+    //   pageApi={[]}
+    //   searchRender={
+    //     <>
+    //       <SearchItem label="Tra Cứu" name="research" type="input" />
+    //       <SearchItem label="Thêm Mới" name="insert" type="input" />
+    //     </>
+    //   }
+    //   tableOptions={tableColums}
+    // ></MyPage>
+    <></>
   );
 };
 

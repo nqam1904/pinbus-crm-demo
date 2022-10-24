@@ -1,7 +1,7 @@
 import { PageData } from '@/interface';
 import Mock from 'mockjs';
 import { getTableData } from '@/utils/get-table-page-data';
-import { Response } from '../api/request';
+import { Response } from '../api/axiosClient';
 
 Mock.setup({
   timeout: 300,

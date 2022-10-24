@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { ColumnsType } from 'antd/lib/table/interface';
-import { MyResponse } from '@/api/request';
+import { MyResponse } from '@/api/axiosClient';
 import MyTable from '@/components/core/table';
 import { PageData } from '@/interface';
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useState } from 'react';

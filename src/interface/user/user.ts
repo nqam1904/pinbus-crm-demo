@@ -1,32 +1,29 @@
-import { Device } from '@/interface/layout/index.interface';
-import { MenuChild } from '@/interface/layout/menu.interface';
-import { Role } from './login';
+import { Device } from "@/interface/layout/index.interface";
+import { MenuChild } from "@/interface/layout/menu.interface";
 
-export type Locale = 'zh_CN' | 'en_US';
+export type Locale = "zh_CN" | "en_US";
 
 export interface UserState {
-  username: string;
+  username?: string;
 
   /** menu list for init tagsView */
-  menuList: MenuChild[];
+  menuList?: MenuChild[];
 
   /** login status */
-  logged: boolean;
-
-  role: Role;
+  logged?: boolean;
 
   /** user's device */
-  device: Device;
+  device?: Device;
 
   /** menu collapsed status */
-  collapsed: boolean;
+  collapsed?: boolean;
 
   /** notification count */
-  noticeCount: number;
+  noticeCount?: number;
 
   /** user's language */
-  locale: Locale;
+  locale?: Locale;
 
   /** Is first time to view the site ? */
-  newUser: boolean;
+  newUser?: boolean;
 }

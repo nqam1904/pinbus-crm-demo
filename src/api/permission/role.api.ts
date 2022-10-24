@@ -1,4 +1,4 @@
-import { request } from '../request';
+import { request } from '../axiosClient';
 import { GetRoleResult } from '@/interface/permission/role.interface';
 
 /** get role list api */
